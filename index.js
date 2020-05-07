@@ -4,6 +4,9 @@ const projects = [
     },
     {
         name: 'base-apparel-coming-soon-master'
+    },
+    {
+        name: 'intro-component-with-signup-form-master'
     }
 ];
 
