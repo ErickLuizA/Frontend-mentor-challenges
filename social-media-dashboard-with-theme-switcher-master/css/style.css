@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-image: linear-gradient(to bottom, #1f212e, #1e202a 20%);
+}
+
+header, section {
+  max-width: 80vw;
+  margin: 40px auto;
+}
+
+.social {
+  display: flex;
+}
+.social .left-header h1 {
+  color: white;
+}
+.social .left-header span {
+  color: #8b97c6;
+  font-size: 15px;
+}
+.social .right-header {
+  margin-left: auto;
+}
+.social .right-header h3 {
+  color: white;
+  display: inline;
+}
+.social .right-header input[type=checkbox] {
+  visibility: hidden;
+}
+.social .right-header label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: linear-gradient(#378fe6, #3eda82);
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+.social .right-header label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: #252a41;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.social .right-header input:checked + label::after {
+  background: #aeb3cb;
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.up-boxes .boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+.up-boxes .box {
+  background-color: #252a41;
+  width: 240px;
+  height: 240px;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 5px;
+}
+.up-boxes .box:nth-child(1) {
+  border-top: 5px solid deepskyblue;
+}
+.up-boxes .box:nth-child(2) {
+  border-top: 5px solid #1ca0f2;
+}
+.up-boxes .box:nth-child(3) {
+  border-top-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(160deg, #fdc468, #df4996 50%) 30;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.up-boxes .box:nth-child(4) {
+  border-top: 5px solid #c4032a;
+}
+.up-boxes .box:hover {
+  background: #2e3552;
+  cursor: pointer;
+}
+.up-boxes h6 {
+  margin: 30px 0;
+  color: #8b97c6;
+}
+.up-boxes h6 img {
+  transform: translateY(30%);
+  padding-right: 10px;
+}
+.up-boxes strong {
+  color: white;
+  font-size: 40px;
+}
+.up-boxes p {
+  color: #63687e;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+.up-boxes i {
+  font-size: small;
+  color: #1db489;
+}
+.up-boxes .red {
+  color: #dc414c;
+}
+
+header h2 {
+  color: white;
+}
+
+.down-boxes .boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+.down-boxes .box {
+  background-color: #252a41;
+  width: 240px;
+  height: 140px;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "letter icon" "num porcent";
+}
+.down-boxes .box:hover {
+  background: #2e3552;
+  cursor: pointer;
+}
+.down-boxes h6 {
+  color: #8b97c6;
+  grid-area: letter;
+  justify-self: center;
+  align-self: center;
+}
+.down-boxes img {
+  transform: translateY(30%);
+  grid-area: icon;
+  justify-self: center;
+  align-self: center;
+}
+.down-boxes strong {
+  color: white;
+  font-size: 30px;
+  grid-area: num;
+  justify-self: center;
+  align-self: center;
+}
+.down-boxes i {
+  color: #1db489;
+  grid-area: porcent;
+  justify-self: center;
+  align-self: center;
+}
+.down-boxes .red {
+  color: #dc414c;
+}
+
+@media screen and (max-width: 620px) {
+  .boxes .box {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .social {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,216 @@
+@import './variables';
+@import './reset';
+@import url('https://fonts.googleapis.com/css?family=Inter:400,700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-image: $darkBgTwoColors;
+}
+
+header, section {
+    max-width: 80vw;
+    margin: 40px auto;
+}
+
+.social {
+    display: flex;
+
+    .left-header {
+        h1 {
+            color: $whiteText;
+        }
+        span {
+            color: $blueText;
+            font-size: 15px;
+        }
+    }
+
+    .right-header {
+        margin-left: auto;
+
+        h3 {
+            color: $whiteText;
+            display: inline;
+        }
+
+        input[type=checkbox] {
+            visibility: hidden;
+        }
+
+        label {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 52px;
+            height: 27px;
+            background: $darkToggle;
+            float: right;
+            border-radius: 100px;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                width: 20px;
+                height: 20px;
+                background-color: $darkBgCard;
+                border-radius: 90px;
+                transition: 0.3s;
+            }
+        }
+
+        input:checked + label::after {
+            background: $lightToggle;
+            left: calc(100% - 5px);
+            transform: translateX(-100%);
+        }
+    }
+}
+
+.up-boxes {
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        background-color: $darkBgCard;
+        width: 240px;
+        height: 240px;
+        margin-right: auto;
+        text-align: center;
+        border-radius: 5px;
+        &:nth-child(1) {
+
+            border-top: 5px solid $facebook;
+        }
+        &:nth-child(2) {
+            border-top: 5px solid $twitter;
+        }
+        &:nth-child(3) {
+            border-top-width: 5px;
+            border-style: solid;
+            border-image: $instagram 30;
+            border-bottom:0;
+            border-left:0;
+            border-right:0;
+        }
+        &:nth-child(4) {
+            border-top: 5px solid $youtube;
+        }
+        &:hover {
+            background: lighten($darkBgCard,5);
+            cursor: pointer;
+        }
+    }
+
+    h6 {
+        margin: 30px 0;
+        color: $blueText;
+        img {
+            transform: translateY(30%);
+            padding-right: 10px;
+        }
+    }
+
+    strong {
+        color: $whiteText;
+        font-size: 40px;
+    }
+
+    p {
+        color: $darkGrayishBlueText;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-bottom: 30px;
+    }
+
+    i {
+        font-size: small;
+        color: $positive;
+    }
+
+    .red {
+        color: $negative;
+    }
+
+}
+
+header {
+    h2 {
+        color: $whiteText;
+    }
+}
+
+.down-boxes {
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        background-color: $darkBgCard;
+        width: 240px;
+        height: 140px;
+        margin-right: auto;
+        margin-bottom: 20px;
+        text-align: center;
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "letter icon"
+        "num porcent" ;
+        &:hover {
+            background: lighten($darkBgCard,5);
+            cursor: pointer;
+        }
+    }    
+
+    h6 {
+        color: $blueText;
+        grid-area: letter;
+        justify-self: center;
+        align-self: center;
+    }
+
+    img {
+        transform: translateY(30%);
+        grid-area: icon;
+        justify-self: center;
+        align-self: center;
+    }
+
+    strong {
+        color: $whiteText;
+        font-size: 30px;
+        grid-area: num;
+        justify-self: center;
+        align-self: center;
+    }
+
+    i {
+        color: $positive;
+        grid-area: porcent;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .red {
+        color: $negative;
+    }
+}
+
+@media screen and (max-width:620px) {
+    .boxes .box {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .social {
+        display: block;
+    }
+
+}
