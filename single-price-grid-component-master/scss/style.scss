@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+@import './variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .20);
+    .upper {
+        width: 80%;
+        padding: 20px;
+        h1 {
+            color: $cyan;
+        }
+        h2 {
+            color: $brightYellow;
+        }
+        p {
+            color: $blueGray;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        .left {
+            background: $cyan;
+            width: 50%;
+            margin: auto;
+            padding: 50px 25px;
+            h2 {
+                color: $lightGray;
+            }
+            p {
+                color: $lightGray;
+                strong {
+                    color: #fff;
+                    font-size: 40px;
+                }
+                padding-bottom: 10px;
+            }
+            button {
+                width: 100%;
+                margin-top: 10px;
+                padding: 20px 0;
+                background: $brightYellow;
+                outline: none;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                color: #fff;
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+        .right {
+            background: lighten($cyan, 5);
+            width: 50%;
+            padding: 50px 25px;
+            h2 {
+                color: $lightGray;
+                padding: 10px;
+                padding-left: 25px;
+                text-align: start;
+                margin-bottom: 20px;
+            }
+            p {
+                color: $lightGray;
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }           
+}
+
+@media screen and (max-width: 1020px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    main {
+        width: 80%;
+    }
+    .bottom {
+        margin-bottom: 20px;
+        display: block !important;
+        .right {
+            width: 100% !important;
+        }
+        .left {
+            width: 100% !important;
+        }
+    }
+}

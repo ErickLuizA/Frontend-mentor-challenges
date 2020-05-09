@@ -9,6 +9,9 @@ const projects = [
         name: 'intro-component-with-signup-form-master'
     },
     {
+    	name:'single-price-grid-component-master'
+    },
+    {
     	name: 'social-media-dashboard-with-theme-switcher-master'
     }
 ];
