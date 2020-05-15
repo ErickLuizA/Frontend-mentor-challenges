@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+// VARIABLES
+
+$blue: hsl(223, 87%, 63%);
+$paleBlue: hsl(223, 100%, 88%);
+$gray: hsl(0, 0%, 59%);
+$darkblue: hsl(209, 33%, 12%);

@@ -1,0 +1,93 @@
+header {
+
+    .logo {
+        background: url(../images/logo.svg) no-repeat;
+        width: 100px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .heading {
+        letter-spacing: 2px;
+        font-size: 30px;
+        text-align: center;
+
+        .gray {
+            color: $gray;
+            font-weight: 500;
+        }
+    }
+
+    .text {
+        font-size: 14px;
+        color: $darkblue;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .form {
+        text-align: center;
+
+        form {
+            display: flex;
+            width: 500px;
+            margin: auto;
+
+            div {
+                width: 80%;
+
+                input {
+                    width: 80%;
+                    border-radius: 20px;
+                    border: 1px solid $paleBlue;
+                    outline: none;
+                    padding: 15px;
+
+                    &.error {
+                        border: 1px solid rgb(223, 114, 114);
+                    }
+
+                    &::placeholder {
+                        color: $paleBlue;
+                    }
+                }
+
+                small {
+                    color: rgb(223, 114, 114);
+                    font-size: 12px;
+                    display: none;
+                }
+            }
+
+            button {
+                width: 20%;
+                height: 50%;
+                padding: 15px;
+                border-radius: 20px;
+                background: $blue;
+                border: none;
+                outline: none;
+                box-shadow: 1px 1px 5px 1px lighten($blue, 5);
+                color: $paleBlue;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        flex-direction: column;
+        align-items: center;
+        max-width: 90%;
+
+        input {
+            width: 100% !important;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 80% !important;
+        }
+    }
+}
