@@ -28,7 +28,8 @@
   <a href="#clipboard-description">Description</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#building_construction-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
+  <a href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#framed_picture-screenshots">Screenshots</a>
 </p>
 
 
@@ -58,6 +59,13 @@ A repo for my [Frontend Mentor](https://www.frontendmentor.io/) challenges
 ```shell
   Open the index.html file in a browser
 ```
+
+
+## :framed_picture: Screenshots
+
+<div>
+  <img alt="Frontendmentor challenges image" src="./.github/frontendmentor.png"  width="500"/>
+</div>
 
 > [Live Demo](https://frontendmentor-challenge.netlify.app/)
 
